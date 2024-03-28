@@ -1,0 +1,8 @@
+- hosts: localhost  #在本地运行
+  connection: local
+  become: true
+
+  tasks:
+  - name: Install htop
+    apt:
+      name: htop 
