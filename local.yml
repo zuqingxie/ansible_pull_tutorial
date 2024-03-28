@@ -9,7 +9,9 @@
     changed_when: Flase
 
   tasks:
+    - include: tasks/user.yml
     - include: tasks/packages.yml
+    
 
 
   
