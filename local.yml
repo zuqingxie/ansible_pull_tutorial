@@ -2,11 +2,14 @@
   connection: local
   become: true
 
-  tasks:
-  - name: Install htop
+  pre_task:
+    - name: update repostoruies
     apt:
-      name: 
-        - htop
-        - tmux 
+      update_cache: yes
+    changed_when: Flase
+
+  tasks:
+    - include: tasks/packages.yml
+
 
   
